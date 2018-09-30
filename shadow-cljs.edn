@@ -1,11 +1,10 @@
 ;; shadow-cljs configuration
-{:source-paths
- ["src"]
+{:source-paths ["src"]
 
- :dependencies
- [[reagent "0.8.1"]
-  [cider/cider-nrepl "0.16.0"]]
-
+ :dependencies [[reagent "0.8.1"]
+                [cider/cider-nrepl "0.16.0"]
+                [proto-repl "0.1.2"]
+                [proto-repl-charts  "0.2.0"]]
  :builds
  {:app {:target :browser
         :output-dir "public/js"
@@ -13,9 +12,10 @@
 
         :modules
         {:main ;; <- becomes public/js/main.js
-         {:entries [starter.browser]}}
+         {:entries [clojurescript_workshop.core]}}
 
         ;; start a development http server on http://localhost:8020
         :devtools
-        {:http-root "public"
-         :http-port 8020}}}}
+        {:http-root "public"}
+        :preloads [shadow.cljs.devtools.client.hud]
+         :http-port 8020}}}
