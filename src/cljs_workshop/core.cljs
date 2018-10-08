@@ -105,7 +105,7 @@
   [:> Slide
    [:> Text {:textColor "white"} "How?...."]
    [:> Appear [:> Text {:textColor "white"} "Macros!"]]]
-   [:> Appear [:img {:src "/img/simple-unless.gif"}]]])
+   [:> Appear [:img {:src "/img/simple-unless.gif"}]])
 
 (defn slide-12 []
   [:> Slide
