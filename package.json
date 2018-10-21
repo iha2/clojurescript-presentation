@@ -12,7 +12,7 @@
     "spectacle": "^5.1.0"
   },
   "gh-pages-deploy": {
-    "staticpath": "build",
+    "staticpath": "public",
     "cname": "nope.org",
     "prep": [
       "build-sass",
