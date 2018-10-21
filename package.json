@@ -12,13 +12,12 @@
     "spectacle": "^5.1.0"
   },
   "gh-pages-deploy": {
-    "staticpath": "public",
-    "cname": "nope.org",
+    "staticpath": "docs",
     "prep": [
       "build-sass",
       "optimize-img"
     ],
-    "commit": "a custom commit message",
+    "commit": "ghpages update",
     "post": [
       "clean-source"
     ],
