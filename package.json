@@ -10,5 +10,18 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "spectacle": "^5.1.0"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "build",
+    "cname": "nope.org",
+    "prep": [
+      "build-sass",
+      "optimize-img"
+    ],
+    "commit": "a custom commit message",
+    "post": [
+      "clean-source"
+    ],
+    "noprompt": false
   }
 }
