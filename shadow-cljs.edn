@@ -21,18 +21,16 @@
         {:http-root "public"}
         :preloads [shadow.cljs.devtools.client.hud]
         :http-port 8020}
- 
-  :github-pages {:target :browser
-        :output-dir "docs/js"
-        :asset-path "/js"
 
-        :modules
-        {:main ;; <- becomes public/js/main.js
-         {:entries [cljs_workshop.core]}}
-
+  :release {:target :browser
+          :output-dir "docs/js"
+          :asset-path "/js"
+          :modules
+          {:main ;; <- becomes public/js/main.js
+           {:entries [cljs_workshop.core]}}
+          :compiler-options {:optimizations :advanced}
         ;; start a development http server on http://localhost:8020u
         ;; enter into (shadow.cljs.devtools.api/nrepl-select :app) proto-repl to connect to shadow-cljs server
-        :devtools
-        {:http-root "docs"}
-        :preloads [shadow.cljs.devtools.client.hud]
-        :http-port 8020}}}
+          }
+  }
+ }
